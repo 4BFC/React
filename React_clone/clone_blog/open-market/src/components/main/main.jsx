@@ -23,8 +23,8 @@ export const Main = ({ products, setProducts }) => {
         <p>높은 가격</p>
       </div>
       <main className={styles.flex_wrap}>
-        {products.map((products) => {
-          return <Product />;
+        {products.map((product) => {
+          return <Product key={`key=${product.id}`} product={product} />;
         })
 
         }<Product />
