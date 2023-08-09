@@ -1,15 +1,15 @@
 import './App.css';
-import Hello from './components/section1/Hello';
+import Day from './components/section9/Day';
+import DayList from './components/section9/DayList';
+import Header from './components/section9/Header';
 
 function App() {
-  console.log("App.js")
   return (
     <div className="App">
-      <Hello age={10} />
-      <Hello age={20} />
-      <Hello age={30} />
+      <Header />
+      <DayList />
+      <Day />
     </div>
   );
 }
-
 export default App;
