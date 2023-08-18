@@ -15,6 +15,10 @@
     {
       "day": 4,
       "id": 4
+    },
+    {
+      "day": 5,
+      "id": 5
     }
   ],
   "words": [
@@ -76,10 +80,31 @@
     },
     {
       "day": "3",
-      "eng": "apple",
-      "kor": "사과",
+      "eng": "computer",
+      "kor": "컴퓨터",
       "isDone": false,
-      "id": 12
+      "id": 13
+    },
+    {
+      "day": "1",
+      "eng": "create",
+      "kor": "생성하다",
+      "isDone": false,
+      "id": 14
+    },
+    {
+      "day": "1",
+      "eng": "mouse",
+      "kor": "쥐",
+      "isDone": false,
+      "id": 15
+    },
+    {
+      "day": "5",
+      "eng": "smell",
+      "kor": "냄새",
+      "isDone": false,
+      "id": 16
     }
   ]
 }
