@@ -1,0 +1,219 @@
+#-------------------------------------/React_ver_1
+#-------------------------------------/React_ver_1/class_ver1
+
+# .gitignore(React/React_ver_1/class_ver1)
+
+# Ignore 
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+React/React_ver_1/class_ver1/node_modules
+React/React_ver_1/class_ver1/.pnp
+React/React_ver_1/class_ver1/.pnp.js
+
+# testing
+React/React_ver_1/class_ver1/coverage
+
+# production
+React/React_ver_1/class_ver1/build
+
+# misc
+React/React_ver_1/class_ver1/.DS_Store
+React/React_ver_1/class_ver1/.env.local
+React/React_ver_1/class_ver1/.env.development.local
+React/React_ver_1/class_ver1/.env.test.local
+React/React_ver_1/class_ver1/.env.production.local
+
+React/React_ver_1/class_ver1/npm-debug.log*
+React/React_ver_1/class_ver1/yarn-debug.log*
+React/React_ver_1/class_ver1/yarn-error.log*
+
+#-------------------------------------/React_ver_0
+#-------------------------------------/React_ver_0/React_class
+#------------------------------------------------------------/01-starting-project/01-starting-project 2
+
+# .gitignore(React/React_ver_0/React_class/01-starting-project/01-starting-project 2)
+
+# Ignore 
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/node_modules
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/.pnp
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/.pnp.js
+
+# testing
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/coverage
+
+# production
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/build
+
+# misc
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/.DS_Store
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/.env.local
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/.env.development.local
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/.env.test.local
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/.env.production.local
+
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/npm-debug.log*
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/yarn-debug.log*
+React/React_ver_0/React_class/01-starting-project/01-starting-project 2/yarn-error.log*
+
+#------------------------------------------------------------/01-starting-project/react-commplete-guide
+
+# .gitignore(React/React_ver_0/React_class/react-commplete-guide)
+
+# Ignore 
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+React/React_ver_0/React_class/react-commplete-guide/node_modules
+React/React_ver_0/React_class/react-commplete-guide/.pnp
+React/React_ver_0/React_class/react-commplete-guide/.pnp.js
+
+# testing
+React/React_ver_0/React_class/react-commplete-guide/coverage
+
+# production
+React/React_ver_0/React_class/react-commplete-guide/build
+
+# misc
+React/React_ver_0/React_class/react-commplete-guide/.DS_Store
+React/React_ver_0/React_class/react-commplete-guide/.env.local
+React/React_ver_0/React_class/react-commplete-guide/.env.development.local
+React/React_ver_0/React_class/react-commplete-guide/.env.test.local
+React/React_ver_0/React_class/react-commplete-guide/.env.production.local
+
+React/React_ver_0/React_class/react-commplete-guide/npm-debug.log*
+React/React_ver_0/React_class/react-commplete-guide/yarn-debug.log*
+React/React_ver_0/React_class/react-commplete-guide/yarn-error.log*
+
+
+#------------------------------------------------------------/react-commplete-guide-2
+
+
+# .gitignore(React/React_ver_0/React_class/react-commplete-guide-2)
+
+# Ignore 
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+React/React_ver_0/React_class/react-commplete-guide-2/node_modules
+React/React_ver_0/React_class/react-commplete-guide-2/.pnp
+React/React_ver_0/React_class/react-commplete-guide-2/.pnp.js
+
+# testing
+React/React_ver_0/React_class/react-commplete-guide-2/coverage
+
+# production
+React/React_ver_0/React_class/react-commplete-guide-2/build
+
+# misc
+React/React_ver_0/React_class/react-commplete-guide-2/.DS_Store
+React/React_ver_0/React_class/react-commplete-guide-2/.env.local
+React/React_ver_0/React_class/react-commplete-guide-2/.env.development.local
+React/React_ver_0/React_class/react-commplete-guide-2/.env.test.local
+React/React_ver_0/React_class/react-commplete-guide-2/.env.production.local
+
+React/React_ver_0/React_class/react-commplete-guide-2/npm-debug.log*
+React/React_ver_0/React_class/react-commplete-guide-2/yarn-debug.log*
+React/React_ver_0/React_class/react-commplete-guide-2/yarn-error.log*
+
+
+#-------------------------------------/React_ver_0/React_clone
+#------------------------------------------------------------/clone_blog/open-market
+
+
+# .gitignore(React/React_ver_0/React_clone/clone_blog/open-market)
+
+# Ignore 
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+React/React_ver_0/React_clone/clone_blog/open-market/node_modules
+React/React_ver_0/React_clone/clone_blog/open-market/.pnp
+React/React_ver_0/React_clone/clone_blog/open-market/.pnp.js
+
+# testing
+React/React_ver_0/React_clone/clone_blog/open-market/coverage
+
+# production
+React/React_ver_0/React_clone/clone_blog/open-market/build
+
+# misc
+React/React_ver_0/React_clone/clone_blog/open-market/.DS_Store
+React/React_ver_0/React_clone/clone_blog/open-market/.env.local
+React/React_ver_0/React_clone/clone_blog/open-market/.env.development.local
+React/React_ver_0/React_clone/clone_blog/open-market/.env.test.local
+React/React_ver_0/React_clone/clone_blog/open-market/.env.production.local
+
+React/React_ver_0/React_clone/clone_blog/open-market/npm-debug.log*
+React/React_ver_0/React_clone/clone_blog/open-market/yarn-debug.log*
+React/React_ver_0/React_clone/clone_blog/open-market/yarn-error.log*
+
+
+#------------------------------------------------------------/clone_voca
+
+
+# .gitignore(React/React_ver_0/React_clone/clone_voca)
+
+# Ignore 
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+React/React_ver_0/React_clone/clone_voca/node_modules
+React/React_ver_0/React_clone/clone_voca/.pnp
+React/React_ver_0/React_clone/clone_voca/.pnp.js
+
+# testing
+React/React_ver_0/React_clone/clone_voca/coverage
+
+# production
+React/React_ver_0/React_clone/clone_voca/build
+
+# misc
+React/React_ver_0/React_clone/clone_voca/.DS_Store
+React/React_ver_0/React_clone/clone_voca/.env.local
+React/React_ver_0/React_clone/clone_voca/.env.development.local
+React/React_ver_0/React_clone/clone_voca/.env.test.local
+React/React_ver_0/React_clone/clone_voca/.env.production.local
+
+React/React_ver_0/React_clone/clone_voca/npm-debug.log*
+React/React_ver_0/React_clone/clone_voca/yarn-debug.log*
+React/React_ver_0/React_clone/clone_voca/yarn-error.log*
+
+
+#-------------------------------------/React_ver_0/React_Nomad
+#------------------------------------------------------------/nomad_class
+
+
+# .gitignore(React/React_ver_0/React_Nomad/nomad_class)
+
+# Ignore 
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+React/React_ver_0/React_Nomad/nomad_class/node_modules
+React/React_ver_0/React_Nomad/nomad_class/.pnp
+React/React_ver_0/React_Nomad/nomad_class/.pnp.js
+
+# testing
+React/React_ver_0/React_Nomad/nomad_class/coverage
+
+# production
+React/React_ver_0/React_Nomad/nomad_class/build
+
+# misc
+React/React_ver_0/React_Nomad/nomad_class/.DS_Store
+React/React_ver_0/React_Nomad/nomad_class/.env.local
+React/React_ver_0/React_Nomad/nomad_class/.env.development.local
+React/React_ver_0/React_Nomad/nomad_class/.env.test.local
+React/React_ver_0/React_Nomad/nomad_class/.env.production.local
+
+React/React_ver_0/React_Nomad/nomad_class/npm-debug.log*
+React/React_ver_0/React_Nomad/nomad_class/yarn-debug.log*
+React/React_ver_0/React_Nomad/nomad_class/yarn-error.log*
+
+
+
+
