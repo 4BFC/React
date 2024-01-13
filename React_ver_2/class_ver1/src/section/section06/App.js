@@ -1,12 +1,11 @@
 import './App.css';
-import App from './section/section06/App'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <body>
-          <App></App>
+          <h1>App.js</h1>
         </body>
       </header>
     </div>

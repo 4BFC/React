@@ -1,3 +1,33 @@
+#-------------------------------------/React_ver_2
+#-------------------------------------/React_ver_2/class_ver1
+
+# .gitignore(React/React_ver_2/class_ver1)
+
+# Ignore 
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+React/React_ver_2/class_ver1/node_modules
+React/React_ver_2/class_ver1/.pnp
+React/React_ver_2/class_ver1/.pnp.js
+
+# testing
+React/React_ver_2/class_ver1/coverage
+
+# production
+React/React_ver_2/class_ver1/build
+
+# misc
+React/React_ver_2/class_ver1/.DS_Store
+React/React_ver_2/class_ver1/.env.local
+React/React_ver_2/class_ver1/.env.development.local
+React/React_ver_2/class_ver1/.env.test.local
+React/React_ver_2/class_ver1/.env.production.local
+
+React/React_ver_2/class_ver1/npm-debug.log*
+React/React_ver_2/class_ver1/yarn-debug.log*
+React/React_ver_2/class_ver1/yarn-error.log*
+
 #-------------------------------------/React_ver_1
 #-------------------------------------/React_ver_1/class_ver1
 
