@@ -1,15 +1,13 @@
-import Class_App from './section/section06/Class_App'
-
-function App() {
+function Class_App() {
   return (
     <div className="App">
       <header className="App-header">
         <body>
-          <Class_App></Class_App>
+          <h1>App.js</h1>
         </body>
       </header>
     </div>
   );
 }
 
-export default App;
+export default Class_App;
