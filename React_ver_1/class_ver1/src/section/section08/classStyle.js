@@ -1,0 +1,112 @@
+import { useState } from "react";
+
+function Create(props) {
+  return <article>
+    <h2>Create</h2>
+    <form onSubmit={event => {
+      event.preventDefault();
+      const title = event.target.title.value;//name이 title인 값을 가져온다.
+      const body = event.target.body.value;
+      props.onCreate(title, body)
+    }}>
+      <p><input type="text" name="title" placeholder="title"></input></p>
+      <p><textarea name="body" placeholder="body"></textarea></p>
+      <p><input type="submit" value="Create"></input></p>
+    </form>
+  </article>
+}
+
+function Header(props) {
+  return <header>
+    <title>section04</title>
+    <h1><a href="/" onClick={(event) => {
+      event.preventDefault();
+      props.onChangeMode();
+    }}>{props.title}</a></h1>
+  </header>
+}
+
+function Article(props) {//현재 선택된 값의 이름과 내용 -> content에 들어가 있음
+  return <article>
+    <h2>{props.title}</h2>
+    {props.body}
+  </article>
+}
+
+function Nav(props) {//리스트
+  const lis = []
+  for (let i = 0; i < props.topics.length; i++) {
+    let t = props.topics[i];
+    lis.push(
+      <li key={t.id}>
+        <a id={t.id} href={'/read/' + t.id}
+          onClick={(event) => { //event로 클릭될 때
+            event.preventDefault();
+            props.onChangeMode(Number(event.target.id)); //Number는 int로 형변환
+          }}//Number(event.target.id)는 _id이다.
+        >{t.title}</a></li>
+    )
+  }
+  return <nav>
+    <ol>
+      {lis}
+    </ol>
+  </nav>
+
+}
+
+function App() {
+  //조작하고 있는 장치
+  const [mode, setMode] = useState('WELCOME');
+  const [id, setId] = useState(null);
+  const [nextId, setNextId] = useState(4);
+  const [topics, setTopics] = useState([
+    { id: 1, title: 'html', body: 'html is..' },
+    { id: 2, title: 'css', body: 'css is..' },
+    { id: 3, title: 'javascript', body: 'javascript is..' }
+  ])
+
+  let content = null;
+  if (mode === 'WELCOME') {
+    content = <Article title="Welcome" body="Hello, WEB" ></Article>
+  }
+  else if (mode === 'READ') { //READ모드이면..
+    let title, body = null;
+    for (let i = 0; i < topics.length; i++) {
+      if (topics[i].id === id) { //Nav로 부터 선택된 setId로 전달 받은 id값을 브라우저로 들어남
+        title = topics[i].title;
+        body = topics[i].body;
+      }
+    }
+    content = <Article title={title} body={body} ></Article>
+  }
+  else if (mode === 'CREATE') {
+    content = <Create onCreate={(_title, _body) => {
+      const newTopic = { id: nextId, title: _title, body: _body }
+      const newTopics = [...topics] //newTopic값을 push하기 위해서는 기존 topics를 스프레드해야한다. 그리고 해당 변수에 push 해야한다.
+      newTopics.push(newTopic);
+      setTopics(newTopics);
+      setMode('READ');
+      setId(nextId);
+      setNextId(nextId + 1)
+    }}></Create>
+  }
+  return (
+    <div>
+      <Header title="WEB" onChangeMode={() => {
+        // mode = 'WELCOME';
+        setMode('WELCOME')
+      }}></Header>
+      <Nav topics={topics} onChangeMode={(_id) => { //_id는 Number(event.target.id) 이다.
+        setMode('READ')
+        setId(_id); //onChangeMode의 event를 받은 해당 id 값
+      }}></Nav>
+      {content}
+      <a href="/create" onClick={event => {
+        event.preventDefault();
+        setMode('CREATE')
+      }}>Create</a>
+    </div >
+  );
+}
+export default App;  //contact App_5.js
