@@ -128,7 +128,7 @@ function App() {
     }
     content = <Update title={title} body={body} onUpdate={(_title, _body) => {
       const newTopics = [...topics];
-      const updatedTopic = { id: id, title: _title, body: _body }
+      const updatedTopic = { id: id, title: _title, body: _body } //새로운 값 생성
       for (let i = 0; i < newTopics.length; i++) {
         if (newTopics[i].id === id) {
           newTopics[i] = updatedTopic;
