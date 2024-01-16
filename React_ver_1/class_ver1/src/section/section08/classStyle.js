@@ -54,28 +54,6 @@ function Nav(props) {//리스트
   </nav>
 
 }
-//props는 외부자 state는 내부자
-function Update(props) {
-  const [title, setTitle] = useState(props.title);
-  const [body, setBody] = useState(props.body);
-  return <article>
-    <h2>Update</h2>
-    <form onSubmit={event => {
-      event.preventDefault();
-      const title = event.target.title.value;//name이 title인 값을 가져온다.
-      const body = event.target.body.value;
-      props.onUpdate(title, body)
-    }}>
-      <p><input type="text" name="title" placeholder="title" value={title} onChange={event => {
-        setTitle(event.target.value);
-      }}></input></p>
-      <p><textarea name="body" placeholder="body" value={body} onChange={event => {
-        setBody(event.target.value);
-      }}></textarea></p>
-      <p><input type="submit" value="Update"></input></p>
-    </form>
-  </article>
-}
 
 function App() {
   //조작하고 있는 장치
@@ -89,7 +67,6 @@ function App() {
   ])
 
   let content = null;
-  let contextControl = null;
   if (mode === 'WELCOME') {
     content = <Article title="Welcome" body="Hello, WEB" ></Article>
   }
@@ -102,10 +79,6 @@ function App() {
       }
     }
     content = <Article title={title} body={body} ></Article>
-    contextControl = <li><a href={"/update/" + id} onClick={event => {
-      event.preventDefault();
-      setMode('UPDATE');
-    }}>Update</a></li>
   }
   else if (mode === 'CREATE') {
     content = <Create onCreate={(_title, _body) => {
@@ -118,27 +91,6 @@ function App() {
       setNextId(nextId + 1)
     }}></Create>
   }
-  else if (mode === 'UPDATE') {
-    let title, body = null;
-    for (let i = 0; i < topics.length; i++) {
-      if (topics[i].id === id) { //Nav로 부터 선택된 setId로 전달 받은 id값을 브라우저로 들어남
-        title = topics[i].title;
-        body = topics[i].body;
-      }
-    }
-    content = <Update title={title} body={body} onUpdate={(_title, _body) => {
-      const newTopics = [...topics];
-      const updatedTopic = { id: id, title: _title, body: _body } //새로운 값 생성
-      for (let i = 0; i < newTopics.length; i++) {
-        if (newTopics[i].id === id) {
-          newTopics[i] = updatedTopic;
-          break;
-        }
-      }
-      setTopics(newTopics);
-      setMode('READ');
-    }}></Update>
-  }
   return (
     <div>
       <Header title="WEB" onChangeMode={() => {
@@ -150,11 +102,10 @@ function App() {
         setId(_id); //onChangeMode의 event를 받은 해당 id 값
       }}></Nav>
       {content}
-      <li><a href="/create" onClick={event => {
+      <a href="/create" onClick={event => {
         event.preventDefault();
         setMode('CREATE')
-      }}>Create</a></li>
-      {contextControl}
+      }}>Create</a>
     </div >
   );
 }

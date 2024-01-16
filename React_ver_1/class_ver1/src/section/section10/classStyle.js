@@ -102,10 +102,23 @@ function App() {
       }
     }
     content = <Article title={title} body={body} ></Article>
-    contextControl = <li><a href={"/update/" + id} onClick={event => {
-      event.preventDefault();
-      setMode('UPDATE');
-    }}>Update</a></li>
+    contextControl = <>
+      <li><a href={"/update/" + id} onClick={event => {
+        event.preventDefault();
+        setMode('UPDATE');
+      }}>Update</a></li>
+      <li><input type="button" value="Delete" onClick={() => {
+        const newTopics = [] //비어있는 배열
+        for (let i = 0; i < topics.length; i++) {
+          if (topics[i].id !== id) { //설정,선택되어 있는 값이 아닌 것들을 newTopics에 넣어둔다. css를 지운다면 js와 html만 있는 것이다.
+            newTopics.push(topics[i])
+            console.log(topics[i])
+          }
+        }
+        setTopics(newTopics);// 제외된 값 나머지가 newTopics에 있고 setTopics로 새로 정의한다.
+        setMode('WELCOME')
+      }} /></li>
+    </>
   }
   else if (mode === 'CREATE') {
     content = <Create onCreate={(_title, _body) => {
@@ -155,6 +168,7 @@ function App() {
         setMode('CREATE')
       }}>Create</a></li>
       {contextControl}
+
     </div >
   );
 }
