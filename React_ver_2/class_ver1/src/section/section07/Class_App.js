@@ -6,7 +6,8 @@ function Class_App() {
 
   function changeName() {
     // name = name === "Mike" ? "Jane" : "Mike"; //먄약 name이 Mike라면 Jane으로 또느 그의 반대
-    // const newName = name === "Mike" ? "Jane" : "Mike"; //먄약 name이 Mike라면 Jane으로 또느 그의 반대
+    const newName = name === "Mike" ? "Jane" : "Mike"; //먄약 name이 Mike라면 Jane으로 또느 그의 반대
+    setName(newName);
     setName(name === "Mike" ? "Jane" : "Mike");
   }
 
@@ -14,7 +15,7 @@ function Class_App() {
     <div>
       <h1>state</h1>
       <h2>{name}</h2>
-      {/* <button onClick={changeName}>Change</button> */}
+      <button onClick={changeName}>Change</button>
       <button onClick={() => {
         setName(name === "Mike" ? "Jane" : "Mike");
       }}>Change</button>
