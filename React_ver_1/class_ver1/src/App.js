@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import Calculate from "./section/training/Calculate"
-import Show from './section/training/Show';
+import Calculate from "./section/training/calculate/my/Calculate"
+import Show from './section/training/calculate/my/Show';
 
 function App() {
 

@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './section/section10/App_10';
-import App from './App';
+// import App from './App';
+import Test from './test';
+// import Calculator from './Calculator';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Test></Test>
+    {/* <Calculator></Calculator> */}
   </React.StrictMode>
 );
 
