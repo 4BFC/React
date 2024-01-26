@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+<script src="https://www.unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+<script src="https://www.unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+<script type="text/babel">
+  const root = document.getElementById("root")
+  let counter = 0;
+
+  function countUP() {
+    counter = counter + 1;
+    console.log(counter);
+    render();
+  };
+
+  function render() {
+    ReactDOM.render(<Container />, root);
+  }
+
+  const Container = () => {
+    return (
+      <div>
+        <h3>Total clicks: {counter}</h3>  // DOM에 직접적이다. 기존 document보다 더욱 직접적이다.
+        //전강의에서 했던 코드로 button을 클릭하고 해당 값이 변화될 수 있게 해볼 것.
+        <button onClick={countUP}>Click me</button>
+      </div>
+    )
+  };
+  render();
+</script>
+
+</html>
