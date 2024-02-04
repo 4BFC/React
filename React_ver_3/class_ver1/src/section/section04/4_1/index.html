@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+<script src="https://www.unpkg.com/react@17/umd/react.development.js"></script>
+<!-- production.min.js -->
+<script src="https://www.unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<!-- production.min.js -->
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+<script type="text/babel">
+
+  function Btn({ text, onClick }) {
+    console.log(text, "was Rendered")
+    return (
+      <div>
+        <button
+          onClick={onClick}
+          style={{
+            backgroundColor: "tomato",
+            color: "white",
+            padding: "10px 20px",
+            border: 0,
+            borderRadius: 10,
+          }}
+        >
+          {text}
+        </button>
+      </div>
+    );
+  }
+  const MemorizedBtn = React.memo(Btn);
+  //컴포넌트를 여러개 만들어야할 때 주의 해야 한다. 하나의 컴포넌트를 여러개로 사용할 시에 여러 버튼 중 하나의 state가 변경되 었을 때 모든 컴포넌트가 re-render가 되어야 하기 때문이다. 그럴 때 memo라는 hook을 이용해야한다. 따라서 컴포넌트를 함부로 나누어선 안되고 어떻게 왜 나우어야 하는지 잘 생각하며 나누어야 한다.
+  function App() {
+    const [value, setValue] = React.useState("Save Changes");
+    const changeValue = () => setValue("Revert Changes");
+    return (
+      <div>
+        <MemorizedBtn text="Save Change" onClick={changeValue} />
+        <MemorizedBtn text="Continue" />
+      </div>
+    )
+  }
+
+  const root = document.getElementById("root");
+  ReactDOM.render(<App />, root);
+</script>
+
+</html>
