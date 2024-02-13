@@ -3,15 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './section/section10/App_10';
 // import App from './App';
-import MyCal from './MyCal';
+// import App from './section/router/App';
+import MyCal from './section/training/calculate/MyCal';
+import R_oute from './section/router/App'
 // import Calculator from './Calculator';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    {/* <R_oute></R_oute> */}
     {/* <App /> */}
-    <MyCal></MyCal>
+    {/* <MyCal></MyCal> */}
     {/* <Calculator></Calculator> */}
   </React.StrictMode>
 );

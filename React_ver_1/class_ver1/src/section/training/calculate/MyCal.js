@@ -1,5 +1,7 @@
 import { useState } from "react"
 import './myStyle.css'
+import Div_test from './components/div_test'
+import Input_test from './components/input_test'
 //계산한 기록도 만들기
 //a와 b에 아무것도 없을 때 error를 호출 한다.
 //create를 해서 새로운 인자를 붙힐 수 있게 한다.
@@ -53,6 +55,8 @@ export default function MyCal() {
 
   return (
     <>
+      <Div_test></Div_test>
+      <Input_test></Input_test>
       <h3>{result}</h3>
       <div>
         <select onChange={select}>
@@ -62,6 +66,7 @@ export default function MyCal() {
           <option value={'/'}>/</option>
           <option value={'%'}>%</option>
         </select>
+        <button>add arg</button>
       </div>
       <input value={a} placeholder="a" onChange={(e) => { setA(e.target.value) }}></input>
       <div>{cal}</div>
@@ -78,7 +83,7 @@ export default function MyCal() {
         <span><button onClick={delete_All}>Delete All</button></span>
         <ul>
           {lis.map((data, index) => (
-            <li key={index}>{data}</li>
+            <li key={index}>{data} <button onClick={() => { console.log('edit') }}>edit</button></li>
           ))}
         </ul>
       </div>

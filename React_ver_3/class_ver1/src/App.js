@@ -1,4 +1,4 @@
-import SubApp from "./section/section06/6_2/SubApp"
+import SubApp from "./section/section06/6_4/SubApp"
 function App() {
   return (
     <SubApp />
