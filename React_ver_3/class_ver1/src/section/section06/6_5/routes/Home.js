@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import Movie from "../../6_5/components/Movie";
 export default function Home() {
-
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);//copy
   // 기존 fetch대신 async를 사용하기
